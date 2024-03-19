@@ -4,6 +4,9 @@ import com.amdocs.ai.hackathon.hackathon.utility.CommandlineUtility;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.io.File;
+import java.util.Collection;
+
 @Repository
 public class LocalRepository {
 
@@ -15,9 +18,9 @@ public class LocalRepository {
         System.out.println(files);
     }
 
-    public void getFilesRecursivelyInPath(String path){
+    public Collection<File> getFilesRecursivelyInPath(String path){
         //TODO: get the string of the files to be used later in the message to AI
-        commandlineUtility.getFilesRecursivelyByPath(path);
+        return commandlineUtility.getFilesRecursivelyByPath(path);
     }
 
 }

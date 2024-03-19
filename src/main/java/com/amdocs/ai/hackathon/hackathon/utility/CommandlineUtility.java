@@ -52,7 +52,7 @@ public class CommandlineUtility {
         return files;
     }
 
-    public void getFilesRecursivelyByPath(String path){
+    public Collection<File> getFilesRecursivelyByPath(String path){
         Collection files = FileUtils.listFiles(
                 new File(path),
                 new RegexFileFilter("(.*( " + extensions + "))"),
@@ -60,5 +60,6 @@ public class CommandlineUtility {
         );
         //Creating a File object for directory
         files.stream().forEach(System.out::println);
+        return files;
     }
 }
