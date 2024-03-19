@@ -23,6 +23,8 @@
 hs_err_pid*
 replay_pid*
 
-#intelliJ
-.DS_Store
+### IntelliJ IDEA ###
 .idea
+*.iws
+*.iml
+*.ipr
